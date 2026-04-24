@@ -52,11 +52,10 @@ function About() {
         <div className="about-content">
           <h2 className="about-title">Emmanuel Oluwadamilare Taiwo</h2>
           <p className="about-text">
-            I'm a passionate developer with expertise in building modern web applications.
-            I love creating intuitive user interfaces and solving complex problems through code.
+I’m a Full Stack Developer passionate about building responsive, user-friendly, and scalable web applications. I enjoy working across both front-end and back-end technologies to create seamless digital experiences, turning ideas into functional products with clean and efficient code. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
           </p>
           <p className="about-text">
-            With a keen eye for design and a strong foundation in front-end technologies,
+            With a keen eye for design and a strong foundation in front-end and back-end technologies,
             I strive to create seamless digital experiences that leave a lasting impression.
           </p>
         </div>
