@@ -74,3 +74,236 @@
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
+
+/* Hide mobile button on desktop */
+.mobile-btn,
+.mobile-talk-item {
+  display: none;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.menu-toggle .hamburger {
+  display: block;
+  font-size: 24px;
+  color: white;
+  line-height: 1;
+}
+
+/* Responsive Breakpoints */
+
+/* Large Tablets & Small Laptops (iPad Pro 11", iPad Air) */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    width: 90%;
+    gap: 80px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .navbar-links {
+    gap: 1.5rem;
+  }
+}
+
+/* iPad Pro 12.9" */
+@media screen and (max-width: 900px) {
+  .navbar {
+    width: 92%;
+    gap: 40px;
+    padding: 1rem;
+  }
+  
+  .navbar-links {
+    gap: 1rem;
+  }
+  
+  .navbar-links li a {
+    font-size: 0.9rem;
+  }
+  
+  .lets-talk-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* iPad Pro 12.9", iPad Air landscape, smaller tablets */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 95%;
+    margin: 20px;
+    padding: 0.8rem 1rem;
+    gap: 20px;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 20px;
+  }
+  
+  .navbar-links {
+    gap: 0.8rem;
+  }
+  
+  .navbar-links li a {
+    font-size: 0.85rem;
+  }
+  
+  .desktop-btn {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu-toggle .hamburger {
+    font-size: 22px;
+  }
+  
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--primary-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    padding-top: 80px;
+    z-index: 999;
+  }
+  
+  .navbar-links.active {
+    right: 0;
+  }
+  
+  .navbar-links li {
+    opacity: 0;
+    animation: slideIn 0.3s ease forwards;
+  }
+  
+  .navbar-links.active li:nth-child(1) { animation-delay: 0.1s; }
+  .navbar-links.active li:nth-child(2) { animation-delay: 0.2s; }
+  .navbar-links.active li:nth-child(3) { animation-delay: 0.3s; }
+  .navbar-links.active li:nth-child(4) { animation-delay: 0.4s; }
+  .navbar-links.active li:nth-child(5) { animation-delay: 0.5s; }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-talk-item {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+/* iPhone 14/15 Pro Max, large Android phones (412px width) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    margin: 15px;
+    width: 90%;
+    padding: 0.7rem 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-links {
+    width: 80%;
+    max-width: none;
+  }
+  
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+  
+  .lets-talk-btn.mobile-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* iPhone SE, iPhone Mini, small Android phones */
+@media screen and (max-width: 375px) {
+  .navbar {
+    margin: 10px;
+    padding: 0.6rem 0.7rem;
+    border-radius: 15px;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 16px;
+  }
+  
+  .menu-toggle {
+    padding: 8px;
+  }
+  
+  .menu-toggle .hamburger {
+    font-size: 20px;
+  }
+  
+  .navbar-links {
+    width: 85%;
+  }
+  
+  .navbar-links li a {
+    font-size: 0.9rem;
+  }
+}
+
+/* iPhone 14/15 Pro */
+@media screen and (max-width: 393px) {
+  .navbar {
+    margin: 12px;
+    width: 92%;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 17px;
+  }
+}
+
+/* Samsung Galaxy S series, Google Pixel */
+@media screen and (max-width: 360px) {
+  .navbar {
+    margin: 10px;
+    width: 90%;
+    padding: 0.6rem;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 15px;
+  }
+  
+  .navbar-links li a {
+    font-size: 0.85rem;
+  }
+}

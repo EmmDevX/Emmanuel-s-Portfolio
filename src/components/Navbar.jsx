@@ -3,6 +3,7 @@ import './Navbar.css';
 
 function Navbar() {
   const [displayText, setDisplayText] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const fullText = 'Emmanuel';
 
   useEffect(() => {
@@ -19,18 +20,36 @@ function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
         <h1>{displayText}<span className="cursor">|</span></h1>
       </div>
-      <ul className="navbar-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      
+      {/* Hamburger Menu Button */}
+      <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+        <span className="hamburger">☰ </span>
+      </button>
+
+      {/* Navigation Links */}
+      <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+        <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+        <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About Me</a></li>
+        <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
+        <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+        <li className="mobile-talk-item">
+          <a href="https://wa.me/+2347025183733" className="lets-talk-btn" onClick={() => setIsMenuOpen(false)}>
+            Let's Talk
+          </a>
+        </li>
       </ul>
-      <a href="https://wa.me/+2347025183733" className="lets-talk-btn">Let's Talk</a>
+
+      {/* Desktop Let's Talk Button */}
+      <a href="https://wa.me/+2347025183733" className="lets-talk-btn desktop-btn">Let's Talk</a>
     </nav>
   );
 }
