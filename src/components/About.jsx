@@ -56,7 +56,7 @@ I’m a Full Stack Developer passionate about building responsive, user-friendly
           </p>
           <p className="about-text">
             With a keen eye for design and a strong foundation in front-end and back-end technologies,
-            I strive to create seamless digital experiences that leave a lasting impression.
+            I strive to create seamless digital experiences that leave a lasting impression on the public. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
           </p>
         </div>
       </div>
