@@ -11,7 +11,7 @@ function Home() {
           I specialize in building modern web applications with clean code and intuitive user interfaces.
           With a focus on performance and user experience, I bring ideas to life through creative solutions.
         </p>
-        <a href="#" className="resume-button" target="_blank" rel="noopener noreferrer">
+        <a href="/resume.pdf" className="resume-button" target="_blank" rel="noopener noreferrer">
           View My Resume
         </a>
       </div>
