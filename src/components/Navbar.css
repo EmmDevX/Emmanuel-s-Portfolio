@@ -1,0 +1,76 @@
+
+/* Colors */
+:root{
+  --primary-color: #1a1a2e;
+  --secondary-color: #00d4ff;
+  --brand-color: 	#0000FF
+}
+.navbar {
+  margin: 30px;
+  border-radius: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 200px;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color:transparent;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 200;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--brand-color);
+  letter-spacing: 2px;
+
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #00d4ff;
+}
+
+/* Let's Talk Button */
+.lets-talk-btn {
+  margin-left: auto;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lets-talk-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
