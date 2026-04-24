@@ -15,9 +15,15 @@
   gap: 200px;
   align-items: center;
   padding: 1rem 2rem;
-  background-color:transparent;
   background-color: var(--primary-color);
   color: white;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
 }
 
 .navbar-brand h1 {
@@ -164,12 +170,14 @@
     display: block;
     position: absolute;
     right: 20px;
+
     top: 50%;
     transform: translateY(-50%);
   }
   
   .menu-toggle .hamburger {
     font-size: 22px;
+    margin-right: 10px;
   }
   
   .navbar-links {
@@ -226,6 +234,7 @@
   .navbar {
     margin: 15px;
     width: 90%;
+    gap: 40px;
     padding: 0.7rem 0.8rem;
     border-radius: 20px;
   }
@@ -254,6 +263,7 @@
 @media screen and (max-width: 375px) {
   .navbar {
     margin: 10px;
+    gap: 50px;
     padding: 0.6rem 0.7rem;
     border-radius: 15px;
   }
@@ -264,10 +274,13 @@
   
   .menu-toggle {
     padding: 8px;
+    margin-right: 10px;
   }
   
   .menu-toggle .hamburger {
     font-size: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
   }
   
   .navbar-links {

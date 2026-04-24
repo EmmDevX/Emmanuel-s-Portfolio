@@ -6,6 +6,19 @@
   transition: all 1s ease;
 }
 
+.cursor-follower {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 212, 255, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  transition: transform 0.1s ease-out;
+}
+
 /* MORNING */
 .sky.morning {
   background: linear-gradient(to top, #ffb347, #87ceeb);

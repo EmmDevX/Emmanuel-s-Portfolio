@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
 import SkyBackground from './components/SkyBackground';
 
 function App() {
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorPos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <SkyBackground>
+      <div 
+        className="cursor-follower"
+        style={{ left: cursorPos.x, top: cursorPos.y }}
+      />
       <Navbar />
+      <Home />
+      <About />
     </SkyBackground>
   );
 }

@@ -35,4 +35,4 @@ It is designed with a clean UI, smooth animations, and mobile-friendly responsiv
 
 ---
 
-## 📂 Project Structure
+
