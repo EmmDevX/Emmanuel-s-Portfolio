@@ -26,6 +26,19 @@
   z-index: 1000;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 .navbar-brand h1 {
   margin: 0;
   font-size: 25px;

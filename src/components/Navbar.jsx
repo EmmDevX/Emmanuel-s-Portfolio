@@ -27,7 +27,8 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <h1>{displayText}<span className="cursor">|</span></h1>
+        <img src="images/favicon.png" alt="Logo" className="navbar-logo" />
+        <h1>{displayText}<span className="cursor">.</span></h1>
       </div>
       
       {/* Hamburger Menu Button */}
