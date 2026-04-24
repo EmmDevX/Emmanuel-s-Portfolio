@@ -85,11 +85,26 @@
     flex-direction: column-reverse;
     text-align: center;
     gap: 3rem;
+    padding: 0 1rem;
   }
   
   .about-image {
     width: 220px;
     height: 280px;
+  }
+  
+  .about-content {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    text-align: justify;
   }
 }
 
