@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer">
       <p className="copyright">
-        © {currentYear} Emmanuel Taiwo. All rights reserved.
+        © {currentYear} Emmanuel Taiwo | All rights reserved.
       </p>
     </footer>
   );

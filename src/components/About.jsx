@@ -3,7 +3,6 @@ import './About.css';
 
 function About() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -19,15 +18,11 @@ function About() {
 
     const section = sectionRef.current;
     if (section) {
-      section.addEventListener('mouseenter', () => setIsHovering(true));
-      section.addEventListener('mouseleave', () => setIsHovering(false));
       section.addEventListener('mousemove', handleMouseMove);
     }
 
     return () => {
       if (section) {
-        section.removeEventListener('mouseenter', () => setIsHovering(true));
-        section.removeEventListener('mouseleave', () => setIsHovering(false));
         section.removeEventListener('mousemove', handleMouseMove);
       }
     };
