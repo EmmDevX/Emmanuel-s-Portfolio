@@ -6,19 +6,19 @@
   --brand-color: 	#0000FF
 }
 .navbar {
-  margin: 30px;
+  margin: 20px;
   border-radius: 30px;
-  width: 80%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  gap: 170px;
+  gap: 100px;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   background-color: var(--primary-color);
   color: white;
   position: fixed;
-  top: 20px;
+  top: 10px;
   left: 0;
   right: 0;
   margin-left: auto;
