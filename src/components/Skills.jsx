@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Skills.css';
+import { fadeInUp, staggerContainer, viewportSettings } from './animations';
 
 function Skills() {
   const skills = [
@@ -20,21 +22,39 @@ function Skills() {
   return (
     <section className="skills" id="skills">
       <div className="skills-container">
-        <h2 className="skills-title">My Tech Stack</h2>
-        <p className="skills-subtitle">Technologies I work with</p>
+        <motion.h2 
+          className="skills-title"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInUp}
+        >My Tech Stack</motion.h2>
+        <motion.p 
+          className="skills-subtitle"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInUp}
+        >Technologies I work with</motion.p>
         
-        <div className="skills-grid">
+        <motion.div 
+          className="skills-grid"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={staggerContainer}
+        >
           {skills.map((skill, index) => (
-            <div 
+            <motion.div 
               key={index} 
               className="skill-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              variants={fadeInUp}
             >
               <img src={skill.image} alt={skill.name} className="skill-image" />
               <span className="skill-name">{skill.name}</span>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

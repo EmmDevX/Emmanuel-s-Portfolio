@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Contact.css';
+import { fadeInUp, staggerContainer, viewportSettings } from './animations';
 
 function Contact() {
   const socialLinks = [
@@ -14,23 +16,42 @@ function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
-        <h2 className="contact-title">Get in touch with me</h2>
-        <p className="contact-subtitle">Connect with me to build responsive website</p>
+        <motion.h2 
+          className="contact-title"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInUp}
+        >Get in touch with me</motion.h2>
+        <motion.p 
+          className="contact-subtitle"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInUp}
+        >Connect with me to build responsive website</motion.p>
         
-        <div className="social-icons">
+        <motion.div 
+          className="social-icons"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={staggerContainer}
+        >
           {socialLinks.map((social, index) => (
-            <a 
+            <motion.a 
               key={index}
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
               title={social.name}
+              variants={fadeInUp}
             >
               <img src={social.image} alt={social.name} className="social-icon" />
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

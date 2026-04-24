@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import './About.css';
+import { fadeInLeft, fadeInRight, viewportSettings } from './animations';
 
 function About() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -31,7 +33,13 @@ function About() {
   return (
     <section className="about" id="about" ref={sectionRef}>
       <div className="about-container">
-        <div className="about-image-wrapper">
+        <motion.div 
+          className="about-image-wrapper"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInLeft}
+        >
           <div 
             className="wavy-border"
             style={{
@@ -43,8 +51,14 @@ function About() {
               <img src="images/profile.jpg" alt="Emmanuel" />
             </div>
           </div>
-        </div>
-        <div className="about-content">
+        </motion.div>
+        <motion.div 
+          className="about-content"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInRight}
+        >
           <h2 className="about-title">Emmanuel Oluwadamilare Taiwo</h2>
           <p className="about-text">
 I’m a Full Stack Developer passionate about building responsive, user-friendly, and scalable web applications. I enjoy working across both front-end and back-end technologies to create seamless digital experiences, turning ideas into functional products with clean and efficient code. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
@@ -53,7 +67,7 @@ I’m a Full Stack Developer passionate about building responsive, user-friendly
             With a keen eye for design and a strong foundation in front-end and back-end technologies,
             I strive to create seamless, user-friendly digital experiences that leave a lasting impression on the public. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

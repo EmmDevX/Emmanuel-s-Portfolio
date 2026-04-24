@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Projects.css';
+import { fadeInUp, staggerContainer, viewportSettings } from './animations';
 
 function Projects() {
   const projects = [
@@ -45,15 +47,33 @@ function Projects() {
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
-        <h2 className="projects-title">Seasoned Projects</h2>
-        <p className="projects-subtitle">A showcase of my recent work</p>
+        <motion.h2 
+          className="projects-title"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInUp}
+        >Seasoned Projects</motion.h2>
+        <motion.p 
+          className="projects-subtitle"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={fadeInUp}
+        >A showcase of my recent work</motion.p>
         
-        <div className="projects-grid">
+        <motion.div 
+          className="projects-grid"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          variants={staggerContainer}
+        >
           {projects.map((project, index) => (
-            <div 
+            <motion.div 
               key={project.id} 
               className="project-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              variants={fadeInUp}
             >
               <div className="project-image-wrapper">
                 <img src={project.image} alt={project.title} className="project-image" />
@@ -77,9 +97,9 @@ function Projects() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

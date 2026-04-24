@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Stats.css';
+import { fadeInUp, staggerContainer, viewportSettings } from './animations';
 
 function Stats() {
   const stats = [
@@ -11,14 +13,24 @@ function Stats() {
 
   return (
     <section className="stats">
-      <div className="stats-container">
+      <motion.div 
+        className="stats-container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportSettings}
+        variants={staggerContainer}
+      >
         {stats.map((stat, index) => (
-          <div key={index} className="stat-card">
+          <motion.div 
+            key={index} 
+            className="stat-card"
+            variants={fadeInUp}
+          >
             <div className="stat-number">{stat.number}</div>
             <div className="stat-label">{stat.label}</div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
