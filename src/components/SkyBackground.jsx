@@ -36,39 +36,29 @@ export default function SkyBackground({ children }) {
 
   return (
     <div className={`sky-background ${timeOfDay}`}>
-      {/* Stars - only shown at night */}
-      {timeOfDay === "night" && (
-        <div className="stars-container">
-          {stars.map((star) => (
-            <div
-              key={star.id}
-              className="star"
-              style={{
-                left: `${star.left}%`,
-                top: `${star.top}%`,
-                width: `${star.size}px`,
-                height: `${star.size}px`,
-                animationDelay: `${star.delay}s`,
-                animationDuration: `${star.duration}s`,
-              }}
-            />
-          ))}
-        </div>
-      )}
+      {/* Stars - shown in all times but with varying opacity */}
+      <div className="stars-container">
+        {stars.map((star) => (
+          <div
+            key={star.id}
+            className="star"
+            style={{
+              left: `${star.left}%`,
+              top: `${star.top}%`,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              animationDelay: `${star.delay}s`,
+              animationDuration: `${star.duration}s`,
+              opacity: timeOfDay === "night" ? 1 : timeOfDay === "morning" ? 0.3 : 0.5,
+            }}
+          />
+        ))}
+      </div>
 
-      {/* Crescent Moon - only shown at night */}
-      {timeOfDay === "night" && (
-        <div className="moon">
-          <div className="moon-inner"></div>
-        </div>
-      )}
-
-      {/* Sun - shown in morning and afternoon */}
-      {(timeOfDay === "morning" || timeOfDay === "afternoon") && (
-        <div className="sun">
-          <div className="sun-rays"></div>
-        </div>
-      )}
+      {/* Crescent Moon - shown in all times */}
+      <div className="moon" style={{ opacity: timeOfDay === "night" ? 1 : timeOfDay === "morning" ? 0.3 : 0.5 }}>
+        <div className="moon-inner"></div>
+      </div>
 
       {/* Content overlay */}
       <div className="content">{children}</div>

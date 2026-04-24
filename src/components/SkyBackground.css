@@ -12,11 +12,11 @@
 }
 
 .sky-background.morning {
-  background: linear-gradient(to bottom, #ff9966, #ff5e62);
+  background: linear-gradient(to bottom, #1a3050, #3a5a80, #6a8ab0);
 }
 
 .sky-background.afternoon {
-  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  background: linear-gradient(to bottom, #89a9c9, #a8c4e0, #c5d9eb);
 }
 
 /* Stars */
@@ -38,11 +38,9 @@
 
 @keyframes twinkle {
   0%, 100% {
-    opacity: 0.3;
     transform: scale(1);
   }
   50% {
-    opacity: 1;
     transform: scale(1.2);
   }
 }

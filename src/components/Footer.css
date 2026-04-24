@@ -1,0 +1,12 @@
+/* Footer Styles */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, transparent, rgba(20, 30, 60, 0.9));
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+}
