@@ -16,7 +16,9 @@ function Skills() {
     { name: 'Figma', image: 'images/figma.png' },
     { name: 'Tailwind CSS', image: 'images/tailwindcss.png' },
     { name: 'Next js', image: 'images/nextjs.png' },
-    { name: 'Vue js', image: 'images/vuejs.png'}
+    { name: 'Vite', image: 'images/vite.png'},
+    
+
   ];
 
   return (
