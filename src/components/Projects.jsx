@@ -17,7 +17,7 @@ function Projects() {
     
      {
      id: 2,
-      title: 'Palnora ',
+      title: 'Planora ',
        image: 'images/planora.png',
       description: 'Planora is a modern and simple web-based planner application built with React that helps users organize their daily tasks, stay productive, and manage time efficiently',
       tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Framer Motion'],
