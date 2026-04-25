@@ -21,7 +21,7 @@ function Projects() {
        image: 'images/planora.png',
       description: 'Planora is a modern and simple web-based planner application built with React that helps users organize their daily tasks, stay productive, and manage time efficiently',
       tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Framer Motion'],
-      liveLink: '#',
+      liveLink: 'https://planora2026.vercel.app/',
        githubLink: 'https://github.com/EmmDevX/Planora-Website'
      },
     // {
