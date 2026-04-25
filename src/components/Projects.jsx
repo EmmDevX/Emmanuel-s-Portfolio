@@ -15,15 +15,15 @@ function Projects() {
       githubLink: 'https://github.com/EmmDevX/La-Caret-Coffee'
     },
     
-    // {
-    //   id: 2,
-    //   title: 'Portfolio Website',
-    //   image: 'images/project2.png',
-    //   description: 'Personal portfolio showcasing skills, projects, and contact information with responsive design.',
-    //   tech: ['HTML', 'CSS', 'JavaScript'],
-    //   liveLink: '#',
-    //   githubLink: '#'
-    // },
+     {
+     id: 2,
+      title: 'Palnora ',
+       image: 'images/planora.png',
+      description: 'Planora is a modern and simple web-based planner application built with React that helps users organize their daily tasks, stay productive, and manage time efficiently',
+      tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Framer Motion'],
+      liveLink: '#',
+       githubLink: 'https://github.com/EmmDevX/Planora-Website'
+     },
     // {
     //   id: 3,
     //   title: 'Task Manager',
