@@ -13,7 +13,12 @@ function Home() {
         viewport={viewportSettings}
         variants={staggerContainer}
       >
-        <motion.img className="home-img"></motion.img>
+        <motion.img 
+          src="images/image.png" 
+          alt="Profile" 
+          className="home-img" 
+          variants={fadeInUp}
+        />
         <motion.h1 className="home-title" variants={fadeInUp}>Hi, I'm Emmanuel</motion.h1>
         <motion.p className="home-subtitle" variants={fadeInUp}>A passionate developer creating amazing digital experiences</motion.p>
         <motion.p 
