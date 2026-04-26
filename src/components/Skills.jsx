@@ -10,9 +10,14 @@ function Skills() {
     { name: 'JavaScript', image: 'images/js.png' },
     { name: 'React', image: 'images/react.png' },
     { name: 'Node.js', image: 'images/nodejs.png' },
+    /*
     { name: 'Python', image: 'images/python.png' },
+     */
+    /*
     { name: 'TypeScript', image: 'images/typescript.png' },
-    { name: 'SQL', image: 'images/sql.png' },
+     */
+   /* { name: 'SQL', image: 'images/sql.png' },
+   */
     { name: 'Figma', image: 'images/figma.png' },
     { name: 'Tailwind CSS', image: 'images/tailwindcss.png' },
     { name: 'Next js', image: 'images/nextjs.png' },

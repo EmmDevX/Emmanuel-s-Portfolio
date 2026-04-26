@@ -6,9 +6,9 @@ import { fadeInUp, staggerContainer, viewportSettings } from './animations';
 function Stats() {
   const stats = [
     { number: '2+', label: 'Years of Experience' },
-    { number: '4+', label: 'Projects Completed' },
-    { number: '5+', label: 'Happy Clients' },
-    { number: '100%', label: 'Success Rate' }
+    { number: '2+', label: 'Projects Completed' },
+    { number: '1+', label: 'Happy Clients' },
+    { number: '65%', label: 'Success Rate' }
   ];
 
   return (
