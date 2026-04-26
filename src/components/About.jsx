@@ -60,8 +60,8 @@ function About() {
           variants={fadeInRight}
         >
           <h2 className="about-title">Emmanuel Oluwadamilare Taiwo</h2>
-          <p className="about-text">
-I’m a Full Stack Developer passionate about building responsive, user-friendly, and scalable web applications. I enjoy working across both front-end and back-end technologies to create seamless digital experiences, turning ideas into functional products with clean and efficient code. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
+          <p className="about-text"> Also Known as EmmDevX
+          I’m a Full Stack Developer passionate about building responsive, user-friendly, and scalable web applications. I enjoy working across both front-end and back-end technologies to create seamless digital experiences, turning ideas into functional products with clean and efficient code. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
           </p>
           <p className="about-text">
             With a keen eye for design and a strong foundation in front-end and back-end technologies,
