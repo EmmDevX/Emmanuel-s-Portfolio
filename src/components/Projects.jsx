@@ -14,7 +14,7 @@ function Projects() {
       liveLink: 'https://la-caretcoffee.vercel.app/',
       githubLink: 'https://github.com/EmmDevX/La-Caret-Coffee'
     },
-    
+    /*
      {
      id: 2,
       title: 'Planora ',
@@ -24,6 +24,7 @@ function Projects() {
       liveLink: 'https://planora2026.vercel.app/',
        githubLink: 'https://github.com/EmmDevX/Planora-Website'
      },
+     */
     // {
     //   id: 3,
     //   title: 'Task Manager',
