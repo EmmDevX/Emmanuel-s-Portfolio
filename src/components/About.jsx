@@ -64,7 +64,7 @@ function About() {
           I’m a Front-End Developer passionate about building responsive, user-friendly, and scalable web applications. I enjoy working across both front-end technologies to create seamless digital experiences, turning ideas into functional products with clean and efficient code. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
           </p>
           <p className="about-text">
-            With a keen eye for design and a strong foundation in front-end and back-end technologies,
+            With a keen eye for design and a strong foundation in front-end technologies,
             I strive to create seamless, user-friendly digital experiences that leave a lasting impression on the public. I’m constantly learning and improving my skills to stay up to date with modern web development practices and deliver high-quality solutions.
           </p>
         </motion.div>

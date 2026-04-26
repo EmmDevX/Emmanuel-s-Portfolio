@@ -9,7 +9,9 @@ function Skills() {
     { name: 'CSS', image: 'images/css.png' },
     { name: 'JavaScript', image: 'images/js.png' },
     { name: 'React', image: 'images/react.png' },
+    /*
     { name: 'Node.js', image: 'images/nodejs.png' },
+     */
     /*
     { name: 'Python', image: 'images/python.png' },
      */
