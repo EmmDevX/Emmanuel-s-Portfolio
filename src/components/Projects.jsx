@@ -1,32 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import './Projects.css';
-import { fadeInUp, staggerContainer, viewportSettings } from './animations';
+import React from "react";
+import { motion } from "framer-motion";
+import "./Projects.css";
+import { fadeInUp, staggerContainer, viewportSettings } from "./animations";
 
 function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Velvet Coffee',
-      image: 'images/velvet.png',
-      description: 'A modern and fully responsive coffee shop website designed to deliver a smooth and engaging user experience.',
-      tech: ['Html', 'Css', 'JavaScript'],
-      liveLink: 'https://la-caretcoffee.vercel.app/',
-      githubLink: 'https://github.com/EmmDevX/La-Caret-Coffee'
+      title: "Velvet Coffee",
+      image: "images/velvet.png",
+      description:
+        "A modern and fully responsive coffee shop website designed to deliver a smooth and engaging user experience.",
+      tech: ["Html", "Css", "JavaScript"],
+      liveLink: "https://la-caretcoffee.vercel.app/",
+      githubLink: "https://github.com/EmmDevX/La-Caret-Coffee",
     },
-    
-    //{
-      //  id: 2,
-    //  title: 'Planora ',
-     //  image: 'images/planora.png',
-     // description: 'Planora is a modern and simple web-based planner application built with React that helps users organize their daily tasks, stay productive, and manage time efficiently',
-     // tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Framer Motion', 'Vite'],
-     // liveLink: 'https://planora2026.vercel.app/',
-      // githubLink: 'https://github.com/EmmDevX/Planora-Website'
-    //}
-   
-    
-    
+
+    {
+      id: 2,
+      title: "Planora ",
+      image: "images/planora.png",
+      description:
+        "Planora is a modern and simple web-based planner application built with React that helps users organize their daily tasks, stay productive, and manage time efficiently",
+      tech: ["HTML", "CSS", "JavaScript", "React", "Framer Motion", "Vite"],
+      liveLink: "https://planora2026.vercel.app/",
+      githubLink: "https://github.com/EmmDevX/Planora-Website",
+    },
+
     // {
     //   id: 3,
     //   title: 'Task Manager',
@@ -50,22 +50,26 @@ function Projects() {
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
-        <motion.h2 
+        <motion.h2
           className="projects-title"
           initial="hidden"
           whileInView="visible"
           viewport={viewportSettings}
           variants={fadeInUp}
-        >Seasoned Projects</motion.h2>
-        <motion.p 
+        >
+          Seasoned Projects
+        </motion.h2>
+        <motion.p
           className="projects-subtitle"
           initial="hidden"
           whileInView="visible"
           viewport={viewportSettings}
           variants={fadeInUp}
-        >A showcase of my recent work</motion.p>
-        
-        <motion.div 
+        >
+          A showcase of my recent work
+        </motion.p>
+
+        <motion.div
           className="projects-grid"
           initial="hidden"
           whileInView="visible"
@@ -73,29 +77,53 @@ function Projects() {
           variants={staggerContainer}
         >
           {projects.map((project, index) => (
-            <motion.div 
-              key={project.id} 
+            <motion.div
+              key={project.id}
               className="project-card"
               variants={fadeInUp}
             >
               <div className="project-image-wrapper">
-                <img src={project.image} alt={project.title} className="project-image" />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
                   {project.tech.map((tech, idx) => (
-                    <span key={idx} className="tech-tag">{tech}</span>
+                    <span key={idx} className="tech-tag">
+                      {tech}
+                    </span>
                   ))}
                 </div>
                 <div className="project-buttons">
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-btn live-btn">
-                    <img src="images/link.svg" alt="Live" className="btn-icon" />
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn live-btn"
+                  >
+                    <img
+                      src="images/link.svg"
+                      alt="Live"
+                      className="btn-icon"
+                    />
                     Live
                   </a>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-btn github-btn">
-                    <img src="images/github.svg" alt="GitHub" className="btn-icon" />
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn github-btn"
+                  >
+                    <img
+                      src="images/github.svg"
+                      alt="GitHub"
+                      className="btn-icon"
+                    />
                     GitHub
                   </a>
                 </div>
